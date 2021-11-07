@@ -1,0 +1,35 @@
+
+
+. meta regress whoregion_european whoregionse_asia whoregion_americas whoregion_westernpacific whoregion_latinamerica setting_primar
+> y setting_tertiary setting_multiple setting_database midsamplingdateyr samplingdurationmonths, random(reml)
+note: setting_database omitted because of collinearity
+
+  Effect-size label:  Effect Size
+        Effect size:  prevalence
+          Std. Err.:  se
+
+Random-effects meta-regression                      Number of obs  =        66
+Method: REML                                        Residual heterogeneity:
+                                                                tau2 =  .01912
+                                                              I2 (%) =   99.99
+                                                                  H2 = 7310.50
+                                                       R-squared (%) =   74.97
+                                                    Wald chi2(10)  =    195.51
+                                                    Prob > chi2    =    0.0000
+------------------------------------------------------------------------------------------
+                _meta_es |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------------------+----------------------------------------------------------------
+      whoregion_european |   .3269569   .1487617     2.20   0.028     .0353893    .6185245
+        whoregionse_asia |   .3828333    .153832     2.49   0.013     .0813281    .6843384
+      whoregion_americas |  -.1400395   .1609323    -0.87   0.384    -.4554611     .175382
+whoregion_westernpacific |   .1210535   .1967643     0.62   0.538    -.2645974    .5067044
+  whoregion_latinamerica |   .2696872   .1967403     1.37   0.170    -.1159166     .655291
+         setting_primary |  -.2941835   .1456191    -2.02   0.043    -.5795916   -.0087753
+        setting_tertiary |  -.0383946   .1750674    -0.22   0.826    -.3815205    .3047312
+        setting_multiple |          0  (omitted)
+        setting_database |  -.0186795   .1499762    -0.12   0.901    -.3126274    .2752684
+       midsamplingdateyr |  -.0055207   .0045012    -1.23   0.220     -.014343    .0033016
+  samplingdurationmonths |  -.0022807   .0002362    -9.65   0.000    -.0027436   -.0018177
+                   _cons |   11.55973   9.069716     1.27   0.202    -6.216587    29.33605
+------------------------------------------------------------------------------------------
+Test of residual homogeneity: Q_res = chi2(55) =  7.1e+05Prob > Q_res = 0.0000
